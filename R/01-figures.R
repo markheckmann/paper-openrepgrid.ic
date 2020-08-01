@@ -6,13 +6,17 @@
 
 
 library(OpenRepGrid)
+library(OpenRepGrid.ic)
 
-x <- boeker    # dataset contained in package, see ?boeker
+#file <- system.file("extdata", "sylvia.xlsx", package = "OpenRepGrid.ic")
+#x <- importExcel("data/")
+
+x <- boeker   
   
-# 01 Clustered Bertin  -----------
+# 01 Bertin  -----------
 
-png("img/01-bertin-clustered.png", width = 20, height = 15, res = 300, units = "cm")
-bertinCluster(x, colors = c("white", "darkred"))
+png("img/01-bertin.png", width = 20, height = 15, res = 300, units = "cm")
+  bertin(x, colors = c("white", "darkred"))
 dev.off()
 
 
